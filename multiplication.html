@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="multiplication.css">
+</head>
+<body>
+    
+    <h4>print times table</h4>
+    <input type="number" id="number" placeholder="enter number">
+    <button id="print" onclick="printMultiplicationTable()">print multiplication table</button>
+    
+
+    <div id="multiplication-table-div">
+    </div>
+    <script>
+        function printMultiplicationTable(){
+            let n = parseInt(document.getElementById("number").value)
+            let multiplicationDiv = document.getElementById("multiplication-table-div")
+            let table = document.createElement("table")
+            for(let i = 1; i<= 12; i++) {
+                const result = n * i
+                let row = document.createElement("tr")
+                let cell1 = document.createElement("td")
+                let cell2 = document.createElement("td")
+                cell1.textContent = `${n} * ${i} = `;
+                cell2.textContent = result;
+                row.appendChild(cell1)
+                row.appendChild(cell2)
+                table.appendChild(row)
+            }
+            console.log(multiplicationDiv)
+            console.log(table)
+
+            multiplicationDiv.appendChild(table)
+        }
+        function multiplicationTable(n){
+            for(let i = 1; i <= 12; i++)
+            console.log(`${n} * ${i} = ${n*i}`)
+        }
+    </script>
+</body>
+</html>

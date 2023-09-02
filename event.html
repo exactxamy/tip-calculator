@@ -1,0 +1,18 @@
+<html>
+<body>
+   <h2>Bind an event using <i>addEventListener</i> in JavaScript</h2>
+   <button id = "btn"> Click me</button>
+   <p id = "root"> Welcome to Tutorialspoint!</p>
+   <script>
+   
+      // Event Handler
+      function clickHandler() {
+         document.getElementById('root').innerHTML = 'Button is Clicked!'
+      }
+      let element = document.getElementById('btn')
+
+      // Binding a click event
+      element.addEventListener('click', clickHandler)
+   </script>
+ </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="interactive">
+        <label for="amount">Amount: </label>
+        <input type="number" id="amount"><br>
+
+        <label for="tip">Tip: </label>
+        <input type="number" id="percentage"><br>
+
+        <label for=""></label>
+        <input type="radio" id="" name="tipType" value="percentage" checked> percentage <br>
+        <input type="radio" name="tipType" value="custom">Custom amount
+
+        <h2>Tip <span id="tipAmount" class="">0.00</span></h2>
+
+        <h2>Total <span id="total" class="">0.00</span></h2>
+      <button onclick="calculateTip()"> Calculate </button>
+
+    </div>
+
+   <script src="testwork.js"></script>
+</body>
+</html>
